@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Devanshu Saini",
+    "email": "devanshu2@gmail.com",
+    "phone": "+918447523757",
+    "website": "https://www.linkedin.com/in/devanshu2/",
+  },
+  {
+     "id": 2,
+     "name": "Geetanjali Saini",
+     "email": "geetanjali.shakya@gmail.com",
+     "phone": "+918447523757",
+     "website": "https://www.facebook.com/devanshu2",
+   },
+  {
+     "id": 3,
+     "name": "Vijay Krishna Saini",
+     "email": "vijay.saini@madeeasyschool.in",
+     "phone": "+918901118888",
+     "website": "hildegard.org",
+   },
+  {
+     "id": 4,
+     "name": "Anurag Singh Saini",
+     "email": "aaanurag12@gmail.com",
+     "phone": "+918447523757",
+     "website": "https://www.linkedin.com/in/anurag-saini-the-designer/",
+   }
+]

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="TXq-8i-Bcd">
+            <objects>
+                <viewController storyboardIdentifier="LaunchViewController" id="RMQ-lf-rCZ" customClass="LaunchViewController" customModule="ContactDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAW-d6-2OL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMy-by-5nP">
+                                <rect key="frame" x="167.5" y="437.5" width="79.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KMy-by-5nP" firstAttribute="centerY" secondItem="mAW-d6-2OL" secondAttribute="centerY" id="cua-cw-FwC"/>
+                            <constraint firstItem="KMy-by-5nP" firstAttribute="centerX" secondItem="mAW-d6-2OL" secondAttribute="centerX" id="raw-ZH-GU0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ghy-TZ-Dla"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ucx-ab-DJu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LG9-ic-QE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="-295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QSE-fy-9pk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6M-xy-ZbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="LaunchNavigationController" id="TMq-uM-Gw3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3cI-m2-E5x">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-867" y="-295"/>
+        </scene>
+    </scenes>
+</document>

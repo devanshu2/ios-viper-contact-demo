@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact List View Controller-->
+        <scene sceneID="7QW-IY-xjb">
+            <objects>
+                <viewController storyboardIdentifier="ContactListViewController" id="dEi-47-goX" customClass="ContactListViewController" customModule="ContactDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DKH-Vm-fFR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aoF-6F-2Fj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dEi-47-goX" id="Tfb-RF-SAl"/>
+                                    <outlet property="delegate" destination="dEi-47-goX" id="Dul-dN-upu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aoF-6F-2Fj" firstAttribute="top" secondItem="sFs-6L-TYx" secondAttribute="top" id="CPa-09-Ded"/>
+                            <constraint firstItem="aoF-6F-2Fj" firstAttribute="leading" secondItem="sFs-6L-TYx" secondAttribute="leading" id="E2y-kL-353"/>
+                            <constraint firstItem="sFs-6L-TYx" firstAttribute="trailing" secondItem="aoF-6F-2Fj" secondAttribute="trailing" id="TLH-Jg-zIC"/>
+                            <constraint firstItem="sFs-6L-TYx" firstAttribute="bottom" secondItem="aoF-6F-2Fj" secondAttribute="bottom" id="eNs-Wb-xlM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sFs-6L-TYx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z7B-Zn-err"/>
+                    <connections>
+                        <outlet property="listTable" destination="aoF-6F-2Fj" id="ou0-n3-maF"/>
+                        <segue destination="NzR-7h-Ay7" kind="show" identifier="contactListToDetail" id="dbn-5M-FYW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2A8-dc-jC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="-295"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="luF-ls-333">
+            <objects>
+                <viewController storyboardIdentifier="ContactDetailViewController" id="NzR-7h-Ay7" customClass="ContactDetailViewController" customModule="ContactDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4EU-n7-vcs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS6-x3-IaM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGB-Sc-GSA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acp-EO-gmo">
+                                        <rect key="frame" x="0.0" y="404" width="414" height="404"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RGB-Sc-GSA" secondAttribute="trailing" id="7vp-a8-It7"/>
+                                    <constraint firstItem="Acp-EO-gmo" firstAttribute="leading" secondItem="OS6-x3-IaM" secondAttribute="leading" id="Odt-gl-hyV"/>
+                                    <constraint firstItem="RGB-Sc-GSA" firstAttribute="top" secondItem="OS6-x3-IaM" secondAttribute="top" id="Qsf-pS-hi1"/>
+                                    <constraint firstItem="RGB-Sc-GSA" firstAttribute="leading" secondItem="OS6-x3-IaM" secondAttribute="leading" id="ZpG-4O-HJs"/>
+                                    <constraint firstItem="Acp-EO-gmo" firstAttribute="top" secondItem="RGB-Sc-GSA" secondAttribute="bottom" id="kiY-XH-mbw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Acp-EO-gmo" secondAttribute="bottom" id="mpv-FV-77m"/>
+                                    <constraint firstItem="RGB-Sc-GSA" firstAttribute="height" secondItem="OS6-x3-IaM" secondAttribute="height" multiplier="0.5" id="otg-9V-G87"/>
+                                    <constraint firstAttribute="trailing" secondItem="Acp-EO-gmo" secondAttribute="trailing" id="tV7-Bz-Bth"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F0s-El-VFo" firstAttribute="bottom" secondItem="OS6-x3-IaM" secondAttribute="bottom" id="7Kd-Jx-Mtx"/>
+                            <constraint firstItem="OS6-x3-IaM" firstAttribute="top" secondItem="F0s-El-VFo" secondAttribute="top" id="AFH-Yf-iAY"/>
+                            <constraint firstItem="OS6-x3-IaM" firstAttribute="leading" secondItem="F0s-El-VFo" secondAttribute="leading" id="PN1-yn-BmP"/>
+                            <constraint firstItem="F0s-El-VFo" firstAttribute="trailing" secondItem="OS6-x3-IaM" secondAttribute="trailing" id="rGq-1m-C4K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F0s-El-VFo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lGO-h3-X1c"/>
+                    <connections>
+                        <outlet property="infoContainer" destination="RGB-Sc-GSA" id="UnH-p4-ehE"/>
+                        <outlet property="webContainer" destination="Acp-EO-gmo" id="6yc-Bx-CVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sd1-nk-qgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="-295"/>
+        </scene>
+        <!--Contact Detail Info View Controller-->
+        <scene sceneID="5ZT-R5-Ehx">
+            <objects>
+                <viewController storyboardIdentifier="ContactDetailInfoViewController" id="arC-Li-0Cc" customClass="ContactDetailInfoViewController" customModule="ContactDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rTE-a9-Px9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-sH-pnH">
+                                <rect key="frame" x="15" y="52" width="384" height="802"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NFl-a9-L1O" firstAttribute="trailing" secondItem="e7o-sH-pnH" secondAttribute="trailing" constant="15" id="GOa-fV-u3B"/>
+                            <constraint firstItem="NFl-a9-L1O" firstAttribute="bottom" secondItem="e7o-sH-pnH" secondAttribute="bottom" constant="8" id="IJX-W6-wXO"/>
+                            <constraint firstItem="e7o-sH-pnH" firstAttribute="top" secondItem="NFl-a9-L1O" secondAttribute="top" constant="8" id="Kb9-7m-VEu"/>
+                            <constraint firstItem="e7o-sH-pnH" firstAttribute="leading" secondItem="NFl-a9-L1O" secondAttribute="leading" constant="15" id="YlB-fP-IJa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NFl-a9-L1O"/>
+                    </view>
+                    <connections>
+                        <outlet property="verticalStackView" destination="e7o-sH-pnH" id="HWB-2B-Mdq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEF-tz-6O8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2464" y="-289"/>
+        </scene>
+        <!--Web Page View Controller-->
+        <scene sceneID="Lm6-m8-lYA">
+            <objects>
+                <viewController storyboardIdentifier="WebPageViewController" id="1oF-wU-z0N" customClass="WebPageViewController" customModule="ContactDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l5a-NV-nSF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ru-Kh-5Lg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uQX-xC-KZS" firstAttribute="trailing" secondItem="7ru-Kh-5Lg" secondAttribute="trailing" id="3Pj-2q-tah"/>
+                            <constraint firstItem="uQX-xC-KZS" firstAttribute="bottom" secondItem="7ru-Kh-5Lg" secondAttribute="bottom" id="KGB-Hk-teW"/>
+                            <constraint firstItem="7ru-Kh-5Lg" firstAttribute="leading" secondItem="uQX-xC-KZS" secondAttribute="leading" id="dWc-Sd-YqT"/>
+                            <constraint firstItem="7ru-Kh-5Lg" firstAttribute="top" secondItem="uQX-xC-KZS" secondAttribute="top" id="qlm-Kg-PWz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uQX-xC-KZS"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="7ru-Kh-5Lg" id="WHF-j9-4th"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNc-2v-HZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3272" y="-289"/>
+        </scene>
+    </scenes>
+</document>
